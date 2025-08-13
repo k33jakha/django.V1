@@ -9,17 +9,18 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-import os
+import os.path
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR: Path = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-_p7+%fn=%-@)4g_zgfw7harfdg^o%&ae6f#(+40_pcwhl#!ls6'
+SECRET_KEY = 'django-insecure-*m!3o4rsu3^_ze5pw$+*sp+3*&=*!mu9y)&_dfu9a)2ww=8*ex'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -30,12 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    #My apps
+    #My Apps
     'personal',
     
-    
-
-    #Django apps
+    #Django Apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -59,7 +58,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'tamplates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
